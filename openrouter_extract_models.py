@@ -1,13 +1,11 @@
 import json
 import argparse
-from ftplib import print_line
-
 import requests
 
 
 def filter_authorized_models(models_data):
     """根据author过滤大模型"""
-    authorized_authors = ["openai", "google", "anthropic"]
+    authorized_authors = ["openai", "anthropic"]
     filtered_models = []
     for model in models_data.get('data', {}).get('models', []):
         author = model.get('author', '')
