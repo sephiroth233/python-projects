@@ -1,0 +1,4 @@
+.idea
+.venv
+models.txt
+output.json
